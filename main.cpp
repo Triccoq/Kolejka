@@ -5,9 +5,9 @@
 void menu(void)
 {
     printf("\n");
-    printf("1 - Dodaj liczbe do kolejki (Add)\n");
-    printf("2 - Odczytaj pierwsza wartosc z kolejki (First)\n");
-    printf("3 - Usun wartosc z z kolejki(Remove)\n");
+    printf("1 - Dodaj liczbe do kolejki (add)\n");
+    printf("2 - Odczytaj pierwsza wartosc z kolejki (first)\n");
+    printf("3 - Usun wartosc z z kolejki(remove)\n");
     printf("4 - Sprawdz czy kolejka jest pusty\n");
     printf("5 - Sprawdz czy kolejka jest pelny\n");
     printf("6 - Koniec programu\n");
@@ -31,7 +31,7 @@ int main()
                 if ( !isQueueFull() ){
                     printf("Podaj wartosc: ");
                     scanf("%d", &temp);
-                    Add(temp);
+                    add(temp);
                 }
                 else {
                     printf("operacja niedozwolona Kolejka pelna!!!\n\n");
@@ -41,7 +41,7 @@ int main()
 
             case 2:
                 if (!isQueueEmpty()) {
-                    temp = First();
+                    temp = first();
                     printf("Odczytana wartosc: %d", temp);
                 }
                 else {
@@ -52,7 +52,7 @@ int main()
 
             case 3:
                 if (!isQueueEmpty()) {
-                    temp = Remove();
+                    temp = remove();
                     printf("Odczytana wartosc: %d", temp);
                 }
                 else {
